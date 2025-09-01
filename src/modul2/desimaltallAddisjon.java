@@ -10,6 +10,5 @@ public class desimaltallAddisjon {
         String resultat = "Resultatet ble " + s2;
         // Variabelen resultat inneholder teksten Resultatet ble 22.67
         System.out.println(resultat);
-
     }
 }
