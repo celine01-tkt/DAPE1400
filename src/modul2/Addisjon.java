@@ -33,6 +33,5 @@ public class Addisjon {
                 "Resultatet av addisjon",
                 JOptionPane.PLAIN_MESSAGE
         );
-
     }//Slutt på main-metoden
 }//Slutt på klassen Addisjon
