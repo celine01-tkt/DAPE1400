@@ -9,15 +9,19 @@ public class desimaltallAddisjon {
         String andreStr = JOptionPane.showInputDialog("Skriv inn andre desimaltall");
 
         //Konverterer til double:
-        double d1 = 13.7;
-        double d2 = 3.97;
+        double d1 = Double.parseDouble(førsteStr);
+        double d2 = Double.parseDouble(andreStr);
 
         //Beregner summen:
         double sum = d1 + d2;
 
+        //Lager regnestykket som en streng:
+        String resultat = d1 + " + " + d2 + " = " + sum;
 
-        String resultat = "Resultatet ble " + s2;
-        // Variabelen resultat inneholder teksten Resultatet ble 22.67
-        System.out.println(resultat);
+        // Viser regnestykket i meldingsboks:
+        JOptionPane.showMessageDialog(null, //midt på skjermen
+                resultat, //meldingen
+                "Resultat av addisjon", //tittle
+                JOptionPane.INFORMATION_MESSAGE); //ingen ikon
     }
 }
