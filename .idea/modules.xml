@@ -3,6 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Dape1400.iml" filepath="$PROJECT_DIR$/Dape1400.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module 10/module 10.iml" filepath="$PROJECT_DIR$/module 10/module 10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module 12/module 12.iml" filepath="$PROJECT_DIR$/module 12/module 12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module 12 opg5/module 12 opg5.iml" filepath="$PROJECT_DIR$/module 12 opg5/module 12 opg5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module10-2/module10-2.iml" filepath="$PROJECT_DIR$/module10-2/module10-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module11/module11.iml" filepath="$PROJECT_DIR$/module11/module11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/til eksamen/til eksamen.iml" filepath="$PROJECT_DIR$/til eksamen/til eksamen.iml" />
     </modules>
   </component>
 </project>
