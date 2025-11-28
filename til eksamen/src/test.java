@@ -1,15 +1,12 @@
 public class test {
     public static void main(String[] args) {
-        String studentName = "John Doe";
-        int studentID = 15;
-        int studentAge = 23;
-        float studentFee = 75.25f;
-        char studentGrade = 'B';
+        int length = 4;
+        int width = 6;
+        int area;
+        area = length * width;
 
-        System.out.println("Student Name: " + studentName);
-        System.out.println("Student ID: " + studentID);
-        System.out.println("Student Age: " + studentAge);
-        System.out.println("Student Fee: " + studentFee);
-        System.out.println("Student Grade: " + studentGrade);
+        System.out.println("Length is: " + length);
+        System.out.println("Width is: " + width);
+        System.out.println("Area of the rectangle is: " + area);
     }
 }
