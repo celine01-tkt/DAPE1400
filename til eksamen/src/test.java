@@ -1,12 +1,9 @@
 public class test {
     public static void main(String[] args) {
-        int length = 4;
-        int width = 6;
-        int area;
-        area = length * width;
+        boolean isRaining = true;
 
-        System.out.println("Length is: " + length);
-        System.out.println("Width is: " + width);
-        System.out.println("Area of the rectangle is: " + area);
+        if (isRaining) {
+            System.out.println("Bring an umbrella");
+        }
     }
 }
