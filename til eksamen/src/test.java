@@ -1,9 +1,9 @@
 public class test {
     public static void main(String[] args) {
-        int x = 20;
-        int y = 20;
-        if (x==y){
-            System.out.println("x is equal to y");
+        boolean isLightOn = true;
+
+        if(isLightOn){
+            System.out.println("The light is on");
         }
     }
 }
