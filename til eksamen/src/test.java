@@ -1,11 +1,11 @@
 public class test {
     public static void main(String[] args) {
-        boolean isLightOn = false;
+        boolean isRaining = false;
 
-        if(isLightOn){
-            System.out.println("The light is on");
+        if(isRaining) {
+            System.out.println("Bring an umbrella");
+        }else {
+            System.out.println("No rain today, no need for an umbrella");
         }
-
-        System.out.println("This line runs no matter what, because it is outside the if statement.");
     }
 }
