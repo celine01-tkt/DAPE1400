@@ -20,13 +20,21 @@ public class oppgave1 {
 
         //største verdi
         int storteverdi = ints[0];
+
+        //minste verdi
+        int minsteverdi = ints[0];
+
         for (int i = 1; i < ints.length; i++){
             int currentInt = ints[i];
 
             if (currentInt > storteverdi){
                 storteverdi = currentInt;
             }
+            if (currentInt < minsteverdi){
+                minsteverdi = currentInt;
+            }
         }
         System.out.println("Storteverdi: " + storteverdi);
+        System.out.println("Minsteverdi: " + minsteverdi);
     }
 }
