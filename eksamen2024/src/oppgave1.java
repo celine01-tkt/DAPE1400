@@ -21,7 +21,9 @@ public class oppgave1 {
             //skriv ut alle tall i arrayet ints som er delelig med number (modulo)
             if (number != 0){
                 if(currentInt % number == 0){
-                    System.out.println(currentInt + " er delelig med" + number);
+                    System.out.println(currentInt + " er delelig med " + number);
+                }else {
+                    System.out.println(currentInt + " er ikke delelig med " + number);
                 }
             }
         }
@@ -46,5 +48,10 @@ public class oppgave1 {
         }
         System.out.println("Storteverdi: " + storteverdi);
         System.out.println("Minsteverdi: " + minsteverdi);
+    }
+    public static void main(String[] args) {
+        int[] testArray = {3, -2, 0, -7, 5, -1};
+        oppgave1 obj = new oppgave1();
+        obj.investigateIntArray(testArray, 2);
     }
 }
