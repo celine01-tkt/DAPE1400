@@ -1,38 +1,37 @@
-import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class oppgave3 {
     public void guessTheAnimal(ArrayList<String> animals) {
-        /*be bruker å gjette på et dyr eller gi opp - innhente svar bruk Scanner eller JOption-pane
-        hvis bruker gjetter - ta imot - sjekk om den finnes i listen - gi tilbakemld rett eller galt (hint: arraylist)
-        hvis bruker gir opp - får avskjedsmld*/
+        Scanner scanner = new Scanner(System.in);
 
-        boolean ferdig = false; //spillet er ikke ferdig
+        boolean ferdig = false; // her skal vi forsette til brukeren sier "x"
 
-        while (!ferdig){//så lenge vi ikke er ferdig, fortsett å spørre brukeren
-            String svar = JOptionPane.showInputDialog(
-                    "Vil du gjette på et dyr, eller gi opp (tast x)?\n" +
-                    "Hvis du vil gjette, skriv inn dyret (små bokstaver)"
-            ); //vi lagrer det brukeren skriver inn i variabelen svar, \n= ny linje (linjeskrift), spør brukeren i et popup-vinduet
+        //while-løkke: kjør så lenge vi ikke er ferdig
+        while (!ferdig){
+            //1. still spørsmål til bruken
+            System.out.println("Vil du gjette på et dyr, eller gi opp (tast x)?");
+            System.out.println("Hvis du vil gjette, skriv inn dyret (små bokstaver).");
 
-            if (svar == null){ //hvis brukeren ikke skrev noe, lukket vinduet og vise melding ok,sjalabais!
-                JOptionPane.showMessageDialog(null, "OK, sjalabais!");
-                break; //hopp ut av while-løkket med en gang.
-            } //hvis brukeren lukker vinduet? (trykker "cancel")
+            //2. les det brukeren skriver (en tekstlinje)
+            String svar = scanner.nextLine();
 
-            svar = svar.trim(); //fjerner mellomrom i starten og slutten av svaret
-
-            if (svar.equalsIgnoreCase("x")){ //equalsIgnoreCase("x") sjekk om svaret er x eller X
-                JOptionPane.showMessageDialog(null, "Ok, sjalabais!");
-                ferdig = true; //nå er spillet ferdig
+            //3. hvis brukeren skriver "x" -> avslutt spillet
+            if (svar.equals("x")){
+                System.out.println("Ok, sjalabais!");
+                ferdig = true; //da stopper while-løkken
             }else {
-                if (animals.contains(svar)){ //animals.contains(svar) inneholder listen animals dette ordnet som hun skrev
-                    JOptionPane.showMessageDialog(null,
-                            "Du gjettet riktig - hurra! " + svar + " var et av dyrene!"
-                    ); //showMessageDialog vis et vindu med en tekst
-                }else { //hvis brukeren har skrevet et dyrenavn, da må vi sjekke det
-                    JOptionPane.showMessageDialog(null,
-                            "Hmm, " + svar + " var ikke riktig..."
+                //4. brukeren skrevet et dyrenavn
+                String gjettetDyr = svar;
+
+                //Sjekk om dyret finnes i lista animals
+                if(animals.contains(gjettetDyr)){
+                    System.out.println(
+                            "Du gjettet riktig - hurra!" + gjettetDyr + " var et av dyrene!"
+                    );
+                }else {
+                    System.out.println(
+                            "Hmm, " + gjettetDyr + " var ikke riktig..."
                     );
                 }
             }
@@ -44,7 +43,10 @@ public class oppgave3 {
         animals.add("hund");
         animals.add("rev ");
 
+        //lager et oppgave3-objekt
         oppgave3 spill = new oppgave3();
+
+        //starter spillet
         spill.guessTheAnimal(animals);
     }
 }
