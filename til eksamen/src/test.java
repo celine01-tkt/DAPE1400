@@ -1,11 +1,27 @@
+import java.awt.*;
+
 public class test {
-    // use while loop that the code will run again and again, as long as variable (i) iss less than 5
-    public static void main (String[] args) {
-        int countdown = 3;
-        while (countdown > 0){
-            System.out.println(countdown);
-            countdown--;
-        }
-        System.out.println("Happy New Year!!");
+    public static void main(String[] args) {
+        Robot robot1 = new Robot("Tom", "red", 30);
+        Robot robot2 = new Robot("Jerry", "blue", 40);
+        robot1.introduceSelf();
+        robot2.introduceSelf();
+    }
+}
+
+class Robot {
+    String name;
+    String color;
+    int weight;
+
+    Robot (String n, String c, int a){
+        this.name = n;
+        this.color = c;
+        this.weight = a;
+    }
+
+    void introduceSelf(){
+        System.out.println("Name: " + this.name
+        + ", color: " + this.color + ", weight: " + this.weight);
     }
 }
